@@ -5,10 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="src/script/index.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <header class="flex-column">
+        <div class="flex-column">
+            <h1><span class="color-effect">Lis</span>ta de Ta<span class="color-effect">refas</span></h1>
+            <h2>Gerencie sua <span class="color-effect-underline">rotina</span>, defina suas tarefas, seja <span
+                    class="color-effect-underline">organizado</span>.</h2>
+        </div>
+    </header>
 
+    <main class="flex-column">
+        <section class="child-main flex-column">
+            <section class="section-task flex-column">
+                <h1>Ger<span class="color-effect">enci</span>ador</h1>
+                <div>
+                    <label for="task">Tarefa: </label>
+                    <input type="text" name="task" id="inputTask" placeholder="Ex: Reunião no sábado na empresa...">
+                    <button type="submit">Criar</button>
+                </div>
+            </section>
+            <table class="tasks-table">
+                <thead>
+                    <th>Tarefa</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Título da Task</td>
+                        <td>
+                            <select>
+                                <option value="Pendente">Pendente</option>
+                                <option value="Em andamento">Em andamento</option>
+                                <option value="Concluída">Concluída</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="action-buttons">
+                                <span class="material-symbols-outlined"> edit </span>
+                            </button>
+                            <button class="action-buttons">
+                                <span class="material-symbols-outlined"> delete </span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 
 </html>
