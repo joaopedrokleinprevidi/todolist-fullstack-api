@@ -4,15 +4,15 @@ const validateName = (request, response, next) => {
   let errorMessage = "";
 
   if (body.nome == "") {
-    errorMessage = 'O campo "nome" não pode ser vazio.';
+    errorMessage = 'O campo "Tarefa" não pode ser vazio.';
   }
 
   if (body.nome == undefined) {
-    errorMessage = 'O campo "nome" deve conter algum valor. ';
+    errorMessage = 'O campo "Tarefa" deve conter algum valor. ';
   }
 
   if (body.nome.length <= 3) {
-    errorMessage = 'O campo "nome" deve conter no mínimo 4 caracteres.';
+    errorMessage = 'O campo "Tarefa" deve conter no mínimo 4 caracteres.';
   }
 
   if (!errorMessage == "") {

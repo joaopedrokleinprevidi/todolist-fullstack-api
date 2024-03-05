@@ -6,15 +6,15 @@ const createElements = (
 ) => {
   const element = document.createElement(tag);
 
-  if (!classElement == "") {
+  if (classElement != "") {
     element.classList.add(`${classElement}`);
   }
 
-  if (!innerText == "") {
+  if (innerText != "") {
     element.innerText = innerText;
   }
 
-  if (!innerHTML == "") {
+  if (innerHTML != "") {
     element.innerHTML = innerHTML;
   }
 
@@ -28,7 +28,7 @@ const createSelectsInputs = (value) => {
     <option value="Concluída">Concluída</option> 
     `;
 
-  const select = createElements("select", "", options, "");
+  const select = createElements("select", "", "Pendente", options);
 
   select.value = value;
 
@@ -40,15 +40,22 @@ const createRows = (task) => {
 
   //Criação de elementos HTML
   const Row_TR = createElements("tr");
-  const TitleTask_TD = createElements("td", nome);
+  const TitleTask_TD = createElements("td", "", nome);
   const SelectStatus_TD = createElements("td");
   const ButtonsForActionsOfUser_TD = createElements("td");
 
   const removeTaskButton = createElements(
-    `<button class="action-buttons"> <span class="material-symbols-outlined"> edit </span> </button>`
+    "button",
+    "action-buttons",
+    "",
+    "<span class='material-symbols-outlined'> edit </span>"
   );
+
   const editTaskButton = createElements(
-    `<button class="action-buttons"> <span class="material-symbols-outlined"> delete </span> </button>`
+    "button",
+    "action-buttons",
+    "",
+    "<span class='material-symbols-outlined'> delete </span>"
   );
 
   const newSelect = createSelectsInputs(status);
@@ -62,8 +69,10 @@ const createRows = (task) => {
   return Row_TR;
 };
 
-module.exports = {
+const myFunctions = {
   createElements,
-  createSelectsInputs,
   createRows,
+  createSelectsInputs,
 };
+
+export default myFunctions;

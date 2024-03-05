@@ -170,4 +170,12 @@ select:hover {
   outline: 1px solid #8a62e5;
 }
 
+#errorContainer {
+  font-size: 0.8rem;
+}
+
+.error-message {
+  color: rgb(255, 109, 73);
+}
+
 /* color: #8a62e5; */
