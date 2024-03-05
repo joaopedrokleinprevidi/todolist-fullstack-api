@@ -49,11 +49,28 @@ const createTask = async (event) => {
       showErrorForUserCausedByMiddlewares(error.message);
     });
 
-  //Criar container para enviar avisos ao usuário dentro do Container "gerenciador". Após criação de tasks.
-  // Aparece dinamicamente por 3s caso tenha erros, e some.
-  //Ou colocar uma bolha no input? de erro... enfim
-
   taskInput.value = "";
+  loadAllTasksInDisplay();
+};
+
+const updateTask = async (task) => {
+  const { id, nome, status } = task;
+
+  await fetch(`${enderecoAPI}/${id}`, {
+    method: "put",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ nome, status }),
+  });
+  console.log("update task rodou direito");
+
+  loadAllTasksInDisplay();
+};
+
+const deleteTask = async (id) => {
+  await fetch(`${enderecoAPI}/${id}`, {
+    method: "delete",
+  });
+
   loadAllTasksInDisplay();
 };
 
@@ -68,3 +85,9 @@ function showErrorForUserCausedByMiddlewares(error) {
 buttonCreateTask.addEventListener("click", createTask);
 
 loadAllTasksInDisplay();
+
+const myFunctionsIndex = {
+  deleteTask,
+  updateTask,
+};
+export default myFunctionsIndex;

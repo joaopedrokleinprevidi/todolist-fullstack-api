@@ -1,0 +1,92 @@
+@media screen and (max-width: 480px) {
+  header > div {
+    width: 90%;
+    text-align: center;
+  }
+
+  .child-main {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  .section-task {
+    padding: 0.6rem;
+  }
+
+  .section-task > div {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .section-task > div > input {
+    width: 200px;
+    margin: 0.6rem;
+  }
+
+  .tasks-table {
+    padding: 0.5rem;
+    width: 95%;
+    margin: 0.2rem;
+    word-wrap: break-word;
+  }
+
+  td,
+  th {
+    padding: 2px 4px;
+  }
+
+  select {
+    width: 100%;
+    padding: 2px;
+  }
+
+  .action-buttons {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 1.2rem;
+  }
+
+  header > div {
+    width: 90%;
+    text-align: center;
+  }
+
+  .child-main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  * {
+    font-size: 1.3rem;
+  }
+
+  header > div > h1 {
+    font-size: 2rem;
+  }
+
+  header > div > h1 > span {
+    font-size: 2rem;
+  }
+
+  header > div > h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-task > h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-buttons {
+    width: 50px;
+    height: 50px;
+  }
+}

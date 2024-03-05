@@ -9,11 +9,16 @@
 
 body {
   color: white;
-  background-color: #070f2b;
+  background-color: #323166;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
 }
+/* #070f2b; */
+
+/* #3634aa  */
+
+/* #323166  */
 
 .flex-column {
   display: flex;
@@ -61,7 +66,6 @@ header > div > h2 {
   border: 1px solid #8a62e5;
   width: 85%;
   margin: 1.3rem;
-  /* border-radius: 0.6rem; */
 }
 
 .section-task > h1 {
@@ -176,6 +180,28 @@ select:hover {
 
 .error-message {
   color: rgb(255, 109, 73);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form > input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1.3rem;
+  border-radius: 0.2rem;
+  border: none;
+  margin: 0.1rem;
+  transition: 0.2s linear;
+}
+
+form > input:focus {
+  outline: 3px solid #8a62e5;
+  background-color: #f9f5ff;
+  transition: 0.2s linear;
 }
 
 /* color: #8a62e5; */
